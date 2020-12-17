@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ will.name }}</h1>
+<h2>Purchaser: {{ will.purchaser }}</h2>
+<p>{{ will.description }}</p>
+<a href="{% url 'will_update' will.pk %}">+ Edit Will</a>
+<a href="{% url 'will_delete' will.pk %}">+ Delete Will</a>
+
+{% endblock content %}
